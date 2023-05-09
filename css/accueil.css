@@ -1,0 +1,405 @@
+/*bloc d'initialisation avec les paramètres par défaut des éléments généraux(font,boutons,texte)*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    src: url(../asset/font/Helvetica-Black/Helvetica-Black.otf);
+    font-family: Helveticablack;
+}
+
+@font-face {
+    src: url(../asset/font/gilroy-bold-cufonfonts/Gilroy-Regular.ttf);
+    font-family: Gilroyreg;
+}
+
+@font-face {
+    src: url(../asset/font/gilroy-bold-cufonfonts/Gilroy-Bold.ttf);
+    font-family: Gilroybold;
+}
+
+p {
+    font-family: 'Gilroyreg';
+    color: #ffffff;
+    font-size: 1.688em;
+    text-shadow: 1px 1px 2px black;
+}
+
+h1 {
+    color: white;
+    font-family: 'Helveticablack';
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: 'Gilroybold';
+    text-shadow: 1px 1px 2px black;
+}
+
+button {
+    background-color: #FEC400;
+    width: 240px;
+    height: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+    border: solid none;
+    font-family: 'Gilroybold';
+    font-size: 1.25em;
+    transition: 0.25s;
+}
+
+button:hover {
+    border: solid white;
+    transition: 0.25s;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited,
+a:link {
+    text-decoration: none;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: black;
+    height: 100%;
+    font-size: 100%;
+}
+body::-webkit-scrollbar {
+    width: 12px; /* largeur de la barre de défilement */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: black; /* couleur de la zone de suivi */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #8232FC; /* couleur de la zone de défilement  */
+    border-radius: 20px; /* rondeur de la zone de défilement */
+    border: 3px solid black; /* crée une bordure autour de la zone de défilement */
+  }
+
+
+/*style du header*/
+header {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+}
+/* définition de l'affichage de mon nom dans le header */
+header #titre {
+    display: flex;
+    color: white;
+    margin-left: 10px;
+}
+/* style des textes de navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Gilroybold';
+}
+
+nav ul {
+    display: flex;
+}
+/* placement dans l'espace du header des texte de navigation, ainsi qu'une border noire comme le fond pour permettre un soulignage en cas de survol de la catégorie */
+nav li {
+    margin: 0 50px 0 50px;
+    border-bottom: #000 solid;
+    transition: 0.25s;
+}
+/* affichage d'un soulignage violet lors d'un survol des textes de navigations */
+nav li:hover {
+    border-bottom: #8232FC solid;
+    transition: 0.25s;
+}
+/* couleur des éléments important du menu de navigation */
+nav .accueil {
+    color: #8232FC;
+}
+
+#titre #debuf {
+    color: #8232FC;
+    margin-left: 10px;
+}
+
+
+/* fond de la catégorie du site */
+#bienvenue {
+    background-image: url("../asset/photobashing_arbre.png");
+    background-size: auto;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* style du texte */
+#bienvenue div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* placement bouton en dessous du texte */
+#bienvenue button {
+    margin-top: 10px;
+}
+
+
+/* fond de la catégorie du site */
+#competences {
+    height: 350px;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/* taille images */
+#competences img {
+    width: 50px;
+}
+/* placement titre de la section du site */
+#competences h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+/* organisation des catégories de compétences */
+#competences div {
+    display: flex;
+    justify-content: space-around;
+}
+/* taille texte élémment  */
+#competences p {
+    font-size: 1.125em;
+}
+/* organisation du titre et du texte d'une catégorie */
+#creatif {
+    display: flex;
+    flex-direction: column;
+}
+
+#designweb {
+    display: flex;
+    flex-direction: column;
+}
+
+#devweb {
+    display: flex;
+    flex-direction: column;
+}
+
+#conception {
+    display: flex;
+    flex-direction: column;
+}
+
+#montagevideo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* fond de la catégorie du site */
+#matos {
+    background-image: url("../asset/setup-photo.png");
+    height: 570px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* placement texte dans la section de la page du site */
+#matos div {
+    margin-left: 100px;
+}
+/* placement bouton sous le texte */
+#matos button {
+    margin-top: 10px;
+}
+
+
+/* fond de la catégorie du site */
+#logiciels {
+    height: 350px;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/* placement titre de la section */
+#logiciels h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 65px;
+}
+/* organisation de la page  */
+#logiciels div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+/* bordure noire comme le fond pour préparer une bordure lors d'un survol */
+#logiciels div a img {
+    border-style: solid;
+    border-color: #121212;
+    transition: 0.25s;
+}
+/* couleur de la bordure et son apparition */
+#logiciels div a img:hover {
+    border-style: solid;
+    border-color: #8232FC;
+    border-radius: 15px;
+    transition: 0.25s;
+}
+
+
+/* fond de la catégorie du site+placement des éléments */
+#creations {
+    background-image: url("../asset/vusus_wallpaper.png");
+    height: 570px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#creations div {
+    margin-right: 100px;
+    text-align: right;
+}
+/* positionnement du bouton */
+#creations button {
+    margin-top: 10px;
+    float: right;
+}
+
+
+/* fond de la catégorie du site */
+#contact {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    justify-content: space-around;
+}
+/* taille images plus espacement des textes */
+#contact img {
+    height: 40px;
+    margin-right: 40px;
+}
+/* organisation des blocs textes et des liens des réseaux sociaux */
+#contact #images {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    flex-direction: column;
+    width: 400px;
+}
+
+/* préparation d'une bordure de l'image en survol */
+#contact a img {
+    border-style: solid;
+    border-color: #121212;
+    transition: 0.25s;
+}
+/* apparition de la bordure du logo lors d'un survol */
+#contact a img:hover {
+    border-style: solid;
+    border-color: #8232FC;
+    border-radius: 15px;
+    transition: 0.25s;
+}
+
+#contact .reseaux {
+    margin-top: 0.625em;
+}
+
+#contact .reseaux a {
+    display: flex;
+    align-items: center;
+    font-size: 0.813em;
+}
+/* préparation d'un soulignage en survol */
+#contact .reseaux p {
+    border-bottom: solid;
+    border-color: #121212;
+    transition: 0.25s;
+}
+/* soulignage lors d'un hover */
+#contact .reseaux p:hover {
+    border-bottom: solid;
+    border-color: #8232FC;
+    transition: 0.25s;
+}
+
+
+/* style du footer */
+.footer {
+    background: #000;
+    font-family: 'Gilroyreg';
+    text-align: center;
+}
+/* style du texte */
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+/* style des logos+ bordure noire pour permettre un hover */
+.footer img {
+    width: 40px;
+    margin: 0 40px 0 40px;
+    border-style: solid;
+    border-color: #000000;
+    transition: 0.25s;
+}
+/* apparition de la bordure lors d'un survol */
+.footer img:hover {
+    border-style: solid;
+    border-color: #8232FC;
+    border-radius: 15px;
+    transition: 0.25s;
+}
+/* texte allant à une couleur blanche lors du survol des textes de navigation */
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}

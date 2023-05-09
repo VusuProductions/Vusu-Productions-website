@@ -1,0 +1,346 @@
+/*bloc d'initialisation avec les paramètres par défaut des éléments généraux(font,boutons,texte)*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    src: url(../asset/font/Helvetica-Black/Helvetica-Black.otf);
+    font-family: Helveticablack;
+}
+
+@font-face {
+    src: url(../asset/font/gilroy-bold-cufonfonts/Gilroy-Regular.ttf);
+    font-family: Gilroyreg;
+}
+
+@font-face {
+    src: url(../asset/font/gilroy-bold-cufonfonts/Gilroy-Bold.ttf);
+    font-family: Gilroybold;
+}
+
+p {
+    font-family: 'Gilroyreg';
+    color: #ffffff;
+    font-size: 1.688em;
+    text-shadow: 1px 1px 2px black;
+}
+
+h1 {
+    color: white;
+    font-family: 'Helveticablack';
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: 'Gilroybold';
+    text-shadow: 1px 1px 2px black;
+}
+
+button {
+    background-color: #FEC400;
+    width: 240px;
+    height: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+    border: solid none;
+    font-family: 'Gilroybold';
+    font-size: 1.25em;
+    transition: 0.25s;
+}
+/* le survol du bouton affiche une bordure pour indiquer qu'ill est cliquable */
+button:hover {
+    border: solid white;
+    transition: 0.25s;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited,
+a:link {
+    text-decoration: none;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: black;
+    height: 100%;
+}
+body::-webkit-scrollbar {
+    width: 12px; /* largeur de la barre de défilement */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: black; /* couleur de la zone de suivi */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #8232FC; /* couleur de la zone de défilement  */
+    border-radius: 20px; /* rondeur de la zone de défilement */
+    border: 3px solid black; /* crée une bordure autour de la zone de défilement */
+  }
+
+/*style du header*/
+header {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+}
+/* définition de l'affichage de mon nom dans le header */
+header #titre {
+    display: flex;
+    color: white;
+    margin-left: 10px;
+}
+/* style des textes de navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Gilroybold';
+}
+
+nav ul {
+    display: flex;
+}
+/* placement dans l'espace du header des texte de navigation, ainsi qu'une border noire comme le fond pour permettre un soulignage en cas de survol de la catégorie */
+nav li {
+    margin: 0 50px 0 50px;
+    border-bottom: #000 solid;
+    transition: 0.25s;
+}
+/* affichage d'un soulignage violet lors d'un survol des textes de navigations */
+nav li:hover {
+    border-bottom: #8232FC solid;
+    transition: 0.25s;
+}
+/* couleur des éléments important du menu de navigation */
+nav .accueil {
+    color: #8232FC;
+}
+
+#titre #debuf {
+    color: #8232FC;
+    margin-left: 10px;
+}
+
+
+/* couleur du fond de la page */
+main {
+    background-color: #121212;
+}
+
+/* CSS de la page de matériel */
+/* style du bandeau de la page avec le background et le texte */
+#matos {
+    background-image: url("../asset/setup-photo.png");
+    background-position-y: center;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* style du texte */
+#matos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* organisation de la liste d'objet */
+#liste {
+    background-color: #121212;
+    height: 1700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#liste p {
+    font-size: 1.25em;
+}
+
+#liste h1 {
+    display: flex;
+    justify-content: center;
+}
+/* spacialisation des textes et des images au milieu de la page */
+.classe {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 40px 0;
+    width: 800px;
+}
+
+/* CSS de la page de galerie */
+/* style du bandeau de la page avec le background et le texte */
+#creations {
+    background-image: url("../asset/vusus_wallpapercrea.png");
+    background-position-y: center;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#creations div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#projets {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+/* définir la hauteur des images dans la galerie */
+#projets img {
+    height: 530px;
+}
+
+.image {
+    position: relative;
+    height: 530px;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+}
+/* définition du style de l'overlay lorsqu'on ne survole pas l'image */
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    font-family: 'Gilroyreg';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+/* flou des images lors d'un survol */
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+/* définition de la couleur de fond de l'overlay */
+.image__overlay--primary {
+    background: #8232FC;
+}
+/* mouvement de translation vers le haut du texte de description lors d'un hover sur une image */
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+/* définition de l'opacité finale de l'overlay */
+.image__overlay:hover {
+    opacity: 0.65;
+}
+
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 1.125em;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+
+/* CSS de la page "à propos" */
+#texte {
+    background-image: url("../asset/fondtxt.png");
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/* position du texte de biographie */
+#texte p {
+    float: right;
+    margin-right: 100px;
+    margin-top: 100px;
+}
+/* position du bouton */
+#texte a {
+    margin-right: 270px;
+}
+
+
+/* style du footer */
+.footer {
+    background: #000;
+    font-family: 'Gilroyreg';
+    text-align: center;
+}
+/* style du texte */
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+/* style des logos+ bordure noire pour permettre un hover */
+.footer img {
+    width: 40px;
+    margin: 0 40px 0 40px;
+    border-style: solid;
+    border-color: #000000;
+    transition: 0.25s;
+}
+/* apparition de la bordure lors d'un survol */
+.footer img:hover {
+    border-style: solid;
+    border-color: #8232FC;
+    border-radius: 15px;
+    transition: 0.25s;
+}
+/* texte allant à une couleur blanche lors du survol des textes de navigation */
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
